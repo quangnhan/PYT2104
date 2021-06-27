@@ -18,6 +18,18 @@ class KhachHangMoMo:
         if (amount > self.account_balance):
             print ("Lỗi")
 
+class CongDan:
+    def __init__(self, name, id):
+        self.__name = name
+        self.__id = id
+    def get_name (self, name):
+        return self.__name
+    def get_id (self, id):
+        return self.__id
+
+
+
+
 if __name__ == "__main__":
     bac_ho = KhachHangMoMo('Cent', 'nữ')
     bac_ho.money_free_for_open_account()
