@@ -15,11 +15,7 @@ class KhachHangMoMo:
             print("Login thanh cong!")
         else:
             print("Ban chua co tai khoan, hay tao tai khoan moi")
-            username = input('Nhap username: ')
-            password = input('Nhap password: ')
-
-            new_customer = KhachHangMoMo(username, password)
-            new_customer.account_balance = 50000
+            self.account_balance = 50000
 
             print("Ban da tao tai khoan moi thanh cong")
             print(f"Tai khoan moi co username: {self.username}, password: {self.password}")
@@ -30,10 +26,3 @@ class KhachHangMoMo:
         else:
             print(f"Ban da rut so tien {amount}")
             print(f"So du con lai la: {self.account_balance - amount}")
-
-# if __name__ == "__main__":
-#     customer = KhachHangMoMo("Minh", "123")
-#     customer.money_free_for_open_account()
-    
-#     amount = int(input("Nhap so tien can rut: "))
-#     customer.with_draw(amount)
