@@ -15,6 +15,10 @@ class CongDan:
     def set_id(self, id):
         self.__id = id
 
+class CongAn(CongDan):
+    def __init__(self, cap_bac):
+        pass
+
 if __name__ == "__main__":
     # name = "Nguyen Anh"
     # id = '123456763'
