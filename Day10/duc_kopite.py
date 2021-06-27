@@ -2,29 +2,38 @@ from server import Server
 
 class KhachHangMoMo:
 
-    def __init__(self, username, password, account_balance):
+    def __init__(self, username, password):
         self.username = username
         self.password = password
-        self.account_balance = account_balance
+        self.__account_balance = 0
 
     def money_free_for_open_account(self):
         serve = Server()
         customer = serve.login(self.username, self.password)
         if customer["login"] == False:
-            self.account_balance = 50000
+            self.__account_balance = 50000
         else:
-            self.account_balance = serve.account_balance
+            self.__account_balance = serve.account_balance
 
     def with_draw(self, amount):
-        if amount > self.account_balance:
+        if amount > self.__account_balance:
             print("Your input money is large than your money in account")
         else:
-            self.account_balance = self.account_balance - amount
+            self.__account_balance = self.__account_balance - amount
 
+class CongDan:
+    def __init__(self, name, id):
+        self.__name = name
+        self.__id = id
+
+    def get_name(self):
+        print(f"Ten cua ban la {self.__name}")
+        return self.__name
+
+    def get_id(self):
+        print(f"ID cua ban la {self.__id}")
+        return self.__id
 if __name__=='__main__':
-    username = input("Nhap username:")
-    password = input("Nhap password:")
-    amount = input("Nhap so tien:")
-    khach_hang = KhachHangMoMo(username, password, amount)
-    khach_hang.money_free_for_open_account()
-    khach_hang.with_draw()
+    cong_dan = CongDan("Duc","1234")
+    cong_dan.get_name()
+    cong_dan.get_id()
