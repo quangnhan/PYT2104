@@ -39,16 +39,12 @@ class CongDan:
         self.__id = id
 
 class CongAn(CongDan):
-    def __init__(self, name, id, rank):
+    def __init__(self, name, id, cap_bac):
         super().__init__(name, id)
-        self.__rank = rank
+        self.__cap_bac = cap_bac
 
     def get_cap_bac(self):
-        return {
-            "name":self.__name,
-            "id":self.__id,
-            "rank": self.__rank
-        }
+        return self.__cap_bac
 
 class BacSy(CongDan):
     def __init__(self, name, id, chuyen_khoa):
@@ -56,19 +52,21 @@ class BacSy(CongDan):
         self.__chuyen_khoa = chuyen_khoa
 
     def get_chuyen_khoa(self):
+        return self.__chuyen_khoa
+
+    def get_name_and_id(self):
         return {
             "name":self.__name,
             "id":self.__id,
             "chuyen_khoa": self.__chuyen_khoa
         }
 
-    def get_name_and_id(self):
-        return self.__name, self.__id
-
 if __name__=='__main__':
-    cong_dan = CongDan("Duc","1234")
-    cong_dan.set_name("Anh")
-    cong_dan.set_id("3214")
-    name = cong_dan.get_name()
-    id = cong_dan.get_id()
-    print(name,id)
+
+    cong_an = CongAn("Duc","1234", "Dai tuong")
+    cong_an.set_name("Anh")
+    name = cong_an.get_name()
+    id = cong_an.get_id()
+    cap_bac = cong_an.get_cap_bac()
+
+    print(name,id, cap_bac)
