@@ -1,11 +1,11 @@
 from server import Server
 
 class KhachHangMoMo:
-    account_balance = 0
 
     def __init__(self, username, password):
         self.username = username
         self.password = password
+        self.account_balance = 0
 
     def money_free_for_open_account(self):
         server = Server()
@@ -32,7 +32,7 @@ class KhachHangMoMo:
 
 if __name__ == "__main__":
     customer = KhachHangMoMo("Minh", "123")
-    money_free_for_open_account()
+    customer.money_free_for_open_account()
     
     amount = input("Nhap so tien can rut: ")
-    with_draw(amount)
+    customer.with_draw(amount)
