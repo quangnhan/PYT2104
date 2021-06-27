@@ -21,10 +21,19 @@ class KhachHangMoMo:
         else:
             self.__account_balance = self.__account_balance - amount
 
+class CongDan:
+    def __init__(self, name, id):
+        self.__name = name
+        self.__id = id
+
+    def get_name(self):
+        print(f"Ten cua ban la {self.__name}")
+        return self.__name
+
+    def get_id(self):
+        print(f"ID cua ban la {self.__id}")
+        return self.__id
 if __name__=='__main__':
-    username = input("Nhap username:")
-    password = input("Nhap password:")
-    amount = input("Nhap so tien:")
-    khach_hang = KhachHangMoMo(username, password)
-    khach_hang.money_free_for_open_account()
-    khach_hang.with_draw()
+    cong_dan = CongDan("Duc","1234")
+    cong_dan.get_name()
+    cong_dan.get_id()
