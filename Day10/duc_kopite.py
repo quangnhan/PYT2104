@@ -27,13 +27,48 @@ class CongDan:
         self.__id = id
 
     def get_name(self):
-        print(f"Ten cua ban la {self.__name}")
         return self.__name
 
     def get_id(self):
-        print(f"ID cua ban la {self.__id}")
         return self.__id
+
+    def set_name(self, name):
+        self.__name = name
+
+    def set_id(self, id):
+        self.__id = id
+
+class CongAn(CongDan):
+    def __init__(self, name, id, rank):
+        super().__init__(name, id)
+        self.__rank = rank
+
+    def get_cap_bac(self):
+        return {
+            "name":self.__name,
+            "id":self.__id,
+            "rank": self.__rank
+        }
+
+class BacSy(CongDan):
+    def __init__(self, name, id, chuyen_khoa):
+        super().__init__(name, id)
+        self.__chuyen_khoa = chuyen_khoa
+
+    def get_chuyen_khoa(self):
+        return {
+            "name":self.__name,
+            "id":self.__id,
+            "chuyen_khoa": self.__chuyen_khoa
+        }
+
+    def get_name_and_id(self):
+        return self.__name, self.__id
+
 if __name__=='__main__':
     cong_dan = CongDan("Duc","1234")
-    cong_dan.get_name()
-    cong_dan.get_id()
+    cong_dan.set_name("Anh")
+    cong_dan.set_id("3214")
+    name = cong_dan.get_name()
+    id = cong_dan.get_id()
+    print(name,id)

@@ -31,9 +31,10 @@
 #     khach_hang.with_draw()
 
 class CongDan:
-    def __init__(self,name,id):
+    def __init__(self,name,id,key):
         self.__name = name
         self.__id = id
+        self.__key = key
     
     def get_name(self):
         return self.__name
@@ -41,7 +42,22 @@ class CongDan:
     def get_id(self):
         return self.__id
 
+    def set_name(self,name):
+        if self.__key == "admin":
+            self.__name = name
+
+    def set_id(self,id):
+        if self.__key == "admin":
+            self.__name = id
+
+class CongAn(CongDan):
+    def __init__(self,name,id):
+        super().__init__(name,id)
+        
+        
+
 if __name__ == "__main__":
     name = "Thanh"
     id = "123456"
-    
+    key = "admin"
+    thanh = CongDan(name,id)
