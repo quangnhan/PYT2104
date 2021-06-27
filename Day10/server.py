@@ -2,7 +2,7 @@ import os
 
 class Server:
     def __get_all_customers(self):
-        path = f"{os.getcwd()}/customers.txt"
+        path = f"{os.getcwd()}/Day10/customers.txt"
         f = open(path, 'r')
         customers = []
 
@@ -31,3 +31,10 @@ class Server:
             "login" : login,
             "account_balance" : account_balance,
         }
+
+if __name__ == "__main__":
+    username = "quangnhan"
+    password = "123"
+    server = Server()
+    resposne = server.login(username, password)
+    print(resposne)
