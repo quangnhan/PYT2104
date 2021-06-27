@@ -55,10 +55,12 @@ class BacSi(CongDan):
 if __name__ == "__main__":
     name = "tien"
     id = "08"
-    tien = CongDan(name,id)
+    cap_bac = "dai ta"
+    tien = CongAn(name,id,cap_bac)
 
     tien.say_hi()
-    print(tien.get.id())
+    print(tien.get_cap_bac())
+    print(tien.get_id())
 
 # if __name__ == "__main__":
 #     username = "quangnhan"
