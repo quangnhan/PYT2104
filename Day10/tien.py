@@ -13,18 +13,22 @@ class CongDan:
     def __init__(self,name,id):
         self.__name = name
         self.__id = id
-    def get_name(self,name):
+
+    def get_name(self):
         self.__name = name
-    def get_id(self,id):
+
+    def get_id(self):
         self.__id = id
-    def say_hi(self,name,id):
+
+    def say_hi(self):
         print(f"{self.__name}co id la {self.__id}")
 if __name__ == "__main__":
     name = "tien"
     id = "08"
     tien = CongDan(name,id)
 
-    print(tien.say_hi())
+    tien.say_hi()
+    print(get.id())
 
 # if __name__ == "__main__":
 #     username = "quangnhan"
