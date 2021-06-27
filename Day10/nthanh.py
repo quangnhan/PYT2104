@@ -41,7 +41,16 @@ class CongDan:
     def get_id(self):
         return self.__id
 
+    def set_name(self,name):
+        if key == "admin":
+            self.__name = name
+
+    def set_id(self,id):
+        if key == "admin":
+            self.__name = id
+
 if __name__ == "__main__":
     name = "Thanh"
     id = "123456"
-    
+    key = "admin"
+    thanh = CongDan(name,id)
