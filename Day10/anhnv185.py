@@ -11,7 +11,7 @@ class KhachHangMoMo:
     def money_free_for_open_account():
         server = Server()
         resposne = server.login(username, password)
-        if resposne == "true":
+        if resposne['login'] == "true":
             print("Dang nhap thanh cong")
         else:
             customer_new = []
