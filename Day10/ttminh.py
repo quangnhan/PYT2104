@@ -9,9 +9,9 @@ class KhachHangMoMo:
 
     def money_free_for_open_account(self):
         server = Server()
-        isLoginSuccess = server.login(self.username, self.password)
+        response = server.login(self.username, self.password)
         
-        if isLoginSuccess:
+        if response["login"]:
             print("Login thanh cong!")
         else:
             print("Ban chua co tai khoan, hay tao tai khoan moi")
@@ -20,6 +20,7 @@ class KhachHangMoMo:
 
             new_customer = KhachHangMoMo(username, password)
             new_customer.account_balance = 50000
+            
             print("Ban da tao tai khoan moi thanh cong")
             print(f"Tai khoan moi co username: {self.username}, password: {self.password}")
 
