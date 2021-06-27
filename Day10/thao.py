@@ -19,18 +19,39 @@ class KhachHangMoMo:
             print ("Lỗi")
 
 class CongDan:
-    def __init__(self, name, id):
+    def __init__(self, name, id, key):
         self.__name = name
         self.__id = id
-    def get_name (self, name):
+        self.__key = key
+    def get_name (self):
         return self.__name
-    def get_id (self, id):
+    def get_id (self):
         return self.__id
+    def set_name (self, name):
+        self.__name = name
+    def set_id (self, name):
+        self.__id = id
 
+class CongAn(CongDan):
+   def __init__(self, name, id, cap_bac):
+       super().__init__(name, id)
+       self.cap_bac = cap_bac
+    def get_capbac(self):
+        return self.cap_bac
 
+class Bacsi(CongDan):
+    def __init__(self, name, id, chuyen_khoa):
+       super().__init__(name, id)
+       self.chuyen_khoa = chuyen_khoa
+    def get_chuyen_khoa(self):
+        return self.chuyen_khoa
+    def get_name_and_id(self):
+        return self.__name and self.__id
 
 
 if __name__ == "__main__":
-    bac_ho = KhachHangMoMo('Cent', 'nữ')
-    bac_ho.money_free_for_open_account()
-    bac_ho.__account_balance= 100000
+    name = "Thao"
+    id = "id"
+    Thao = 
+    self.__name
+
