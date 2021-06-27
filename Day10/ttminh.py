@@ -22,7 +22,7 @@ class KhachHangMoMo:
             new_customer.account_balance = 50000
 
             print("Ban da tao tai khoan moi thanh cong")
-            print(f"Tai khoan moi co username: {self.username}, password: {self.password}")
+            print(f"Tai khoan moi co username: {new_customer.username}, password: {new_customer.password}")
 
     def with_draw(self, amount):
         if amount > self.account_balance:
