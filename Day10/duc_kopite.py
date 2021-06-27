@@ -56,17 +56,17 @@ class BacSy(CongDan):
 
     def get_name_and_id(self):
         return {
-            "name":self.__name,
-            "id":self.__id,
+            "name":self.get_name(),
+            "id":self.get_id(),
             "chuyen_khoa": self.__chuyen_khoa
         }
 
 if __name__=='__main__':
-
     cong_an = CongAn("Duc","1234", "Dai tuong")
-    cong_an.set_name("Anh")
     name = cong_an.get_name()
     id = cong_an.get_id()
     cap_bac = cong_an.get_cap_bac()
-
+    bac_si = BacSy("Duc","1234", "Khoa Noi")
+    bacsi = bac_si.get_name_and_id()
     print(name,id, cap_bac)
+    print(bacsi)
