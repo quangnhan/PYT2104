@@ -12,9 +12,11 @@ class KhachHangMoMo:
         resposne = server.login(username, password)
         if resposne['login'] == False:
             self.account_balance = 50000
+        else: 
+            self.account_balance = resposne['account_balance']
     
     def with_draw(self, money):
-        if money < self.account_balance:
+        if money > self.account_balance:
             print('Loi!!')
         else: 
             self.account_balance -= money
