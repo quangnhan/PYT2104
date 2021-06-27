@@ -51,10 +51,20 @@ class CongDan:
             self.__name = id
 
 class CongAn(CongDan):
-    def __init__(self,name,id):
+    def __init__(self,name,id,cap_bac):
         super().__init__(name,id)
+        self.__cap_bac = cap_bac
         
-        
+class BacSi(CongDan):
+    def __init__(self,name,id,chuyenkhoa):
+        self.__chuyenkhoa = chuyenkhoa
+
+    def get_chuyen_khoa(self):
+        return self.__chuyenkhoa
+
+    def get_name_and_id(self):
+        name_id = {"name": self.get_name,"id":self.get_id}
+        return name_id
 
 if __name__ == "__main__":
     name = "Thanh"
