@@ -46,8 +46,10 @@ class BacSi(CongDan):
         return self.__chuyen_khoa
 
     def get_name_and_id(self):
-        return self.__name,self.__id
-
+        return {
+            "name" : self.__name
+            "id"    : self.__id
+        }
 
 
 if __name__ == "__main__":
