@@ -26,3 +26,6 @@ if __name__ == "__main__":
 
     new_name = cd.set_name("Tam Minh")
     new_id = cd.set_id("987654321")
+
+    print(cd.get_name())
+    print(cd.get_id())
