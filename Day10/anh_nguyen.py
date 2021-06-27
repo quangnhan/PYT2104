@@ -33,8 +33,8 @@ class Bacsi(CongAn):
 
     def get_name_and_id(self):
         return {
-            "name":
-            "id": 
+            "name": self.get_name()
+            "id": self.get_id()
         }
 
 if __name__ == "__main__":
