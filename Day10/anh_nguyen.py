@@ -1,12 +1,13 @@
 class CongDan:
-    def __init__(self, __name, __id):
-        self.name = __name
-        self.id = __id
+    def __init__(self, name, id):
+        self.__name = name
+        self.__id = id
+        
     def get_name(self, name):
-        self.name = name
+        return self.name
 
     def get_id(self, id):
-        self.id = id
+        return self.id
 
 if __name__ == "__main__":
     name = "Nguyen Anh"
