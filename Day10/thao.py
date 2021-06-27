@@ -19,5 +19,6 @@ class KhachHangMoMo:
             print ("Lỗi")
 
 if __name__ == "__main__":
-    name = KhachHangMoMo('Cent', 'nữ')
-    name = money_free
+    bac_ho = KhachHangMoMo('Cent', 'nữ')
+    bac_ho.money_free_for_open_account()
+    bac_ho.__account_balance= 100000
