@@ -40,4 +40,5 @@ class Bacsi(CongDan):
 
 if __name__ == "__main__":
     bs = Bacsi("Minh", "123", "abc")
+    print(bs.get_chuyen_khoa())
     print(bs.get_name_and_id())
