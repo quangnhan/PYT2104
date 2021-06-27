@@ -30,6 +30,5 @@ class KhachHangMoMo:
 if __name__ == "__main__":
     username = "quangnhan"
     password = "123"
-    server = Server()
-    resposne = server.login(username, password)
-    print(resposne)
+    ok_ok = KhachHangMoMo(username, password)
+    print(ok_ok)
