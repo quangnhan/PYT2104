@@ -57,8 +57,8 @@ class BacSi(CongDan):
     
     def get_name_and_id(self):
         return {
-            'name' : BacSi.get_name(self),
-            'id' : BacSi.get_id(self)
+            'name' : self.get_name(),
+            'id' : self.get_id()
         }
         
 if __name__ == '__main__':
