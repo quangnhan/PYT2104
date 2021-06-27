@@ -1,7 +1,7 @@
 from server import Server
 
 class KhachHangMoMo:
-    account_balance = 50000
+    account_balance = 0
 
     def __init__(self, username, password):
         self.username = username
@@ -19,6 +19,7 @@ class KhachHangMoMo:
             password = input('Nhap password: ')
 
             new_customer = KhachHangMoMo(username, password)
+            new_customer.account_balance = 50000
             print("Ban da tao tai khoan moi thanh cong")
             print(f"Tai khoan moi co username: {self.username}, password: {self.password}")
 
