@@ -6,24 +6,29 @@ class KhachHangMoMo:
     def __init__(self, username, password):
         self.username = username
         self.password = password
+        self.balance = 0
 
     def money_free_for_open_account():
-        if resposne == "false":
-            path = f"{os.getcwd()}/Day10/customers.txt"
-            f = open(path, 'w')
-            customers = []
-            customers.append[0] = username
-            customers.append[1] = password
-            customers.append[2] = 50
-            return customers
+        server = Server()
+        resposne = server.login(username, password)
+        if resposne == "true":
+            print("Dang nhap thanh cong")
+        else:
+            customer_new = []
+            customer_new.append[0] = username
+            customer_new.append[1] = password
+            customer_new.append[2] = 5000
+            print("new account")
 
-    # def with_draw(amount):
-    #     amount = float(input('Xin moi nhap so tien muon rut: '))
-    #     if amount >= 
+    def with_draw(self, amount):
+        amount = float(input('Xin moi nhap so tien muon rut: '))
+        if amount >= self.balance:
+            print(f"So tien {amount} ban rut vuot qua so du tai khoan, vui long thu lai ")
+        else:
+            return amount
 
 if __name__ == "__main__":
     username = "quangnhan"
     password = "123"
-    server = Server()
-    resposne = server.login(username, password)
-    print(resposne)
+    ok_ok = KhachHangMoMo(username, password)
+    print(ok_ok)
