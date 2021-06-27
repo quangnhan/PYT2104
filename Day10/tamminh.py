@@ -1,42 +1,3 @@
-# from server import Server
-
-# class KhachHangMoMo:
-
-#     def __init__(self, username, password):
-#         self.username = username
-#         self.password = password
-#         self.__account_balance = 0
-
-#     def money_free_for_open_account(self):
-#         server = Server()
-#         response = server.login(self.username, self.password)
-        
-#         if response["login"]:
-#             print("Login thanh cong!")
-#             self.__account_balance = int(response["account_balance"])
-#         else:
-#             print("Ban chua co tai khoan, hay tao tai khoan moi")
-#             self.__account_balance = 50000
-
-#             print("Ban da tao tai khoan moi thanh cong")
-#             print(f"Tai khoan moi co username: {self.username}, password: {self.password}")
-
-#     def with_draw(self, amount):
-#         print(self.__account_balance)
-#         if amount > self.__account_balance:
-#             print(f"So du trong tai khoan khong du. So du {self.__account_balance}")
-#         else:
-#             print(f"Ban da rut so tien {amount}")
-            
-#             print(f"So du con lai la: {self.__account_balance - amount}")
-
-# if __name__ == "__main__":
-#     customer = KhachHangMoMo("bacho", "1234")
-
-#     customer.money_free_for_open_account()
-
-#     customer.with_draw(2000)
-
 class CongDan:
 
     def __init__(self, name, id):
@@ -46,5 +7,22 @@ class CongDan:
     def get_name(self):
         return self.__name
 
-    def get_id(self, id):
+    def get_id(self):
         return self.__id
+
+    def set_name(self, name):
+        self.__name = name
+
+    def set_id(self, id):
+        self.__id = id
+
+if __name__ == "__main__":
+    name = "Minh"
+    id = "1234567896"
+    cd = CongDan(name, id)
+
+    print(cd.get_name())
+    print(cd.get_id())
+
+    new_name = cd.set_name("Tam Minh")
+    new_id = cd.set_id("987654321")
