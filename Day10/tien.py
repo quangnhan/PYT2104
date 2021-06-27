@@ -17,10 +17,10 @@ class CongDan:
     def get_name(self):
         return self.__name
 
-    def set_name(self):
+    def set_name(self,name):
         self.__name = name
 
-    def set_id(self):
+    def set_id(self,id):
         self.__id = id
 
     def get_id(self):
@@ -28,13 +28,35 @@ class CongDan:
 
     def say_hi(self):
         print(f"{self.__name}co id la {self.__id}")
+
+class CongAn(CongDan):
+    def __init__(self,name,id,cap_bac):
+        super().__init__(name,id)
+        self.__cap_bac = cap_bac
+    
+    def get_cap_bac(self):
+        return self.__cap_bac
+
+class BacSi(CongDan):
+    def __init__(self,name,id,chuyen_khoa):
+        super().__init__(name,id)
+        self.__chuyen_khoa = chuyen_khoa
+
+    def get_chuyen_khoa(self):
+        return self.__chuyen_khoa
+
+    def get_name_and_id(self):
+        return self.__name,self.__id
+
+
+
 if __name__ == "__main__":
     name = "tien"
     id = "08"
     tien = CongDan(name,id)
 
     tien.say_hi()
-    print(get.id())
+    print(tien.get.id())
 
 # if __name__ == "__main__":
 #     username = "quangnhan"
