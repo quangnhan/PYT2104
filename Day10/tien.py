@@ -47,8 +47,8 @@ class BacSi(CongDan):
 
     def get_name_and_id(self):
         return {
-            "name" : self.__name
-            "id"    : self.__id
+            "name" : self.get_name(),
+            "id"    : self.get_id()
         }
 
 
