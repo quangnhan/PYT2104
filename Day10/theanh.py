@@ -34,7 +34,7 @@ class Bacsi(CongDan):
 if __name__ == "__main__":
     name = "The Anh"
     id = "123456"
-    Thao = CongDan(name, id)
+    nta = CongDan(name, id)
     bacsi = Bacsi(name, id, 'tai mui hong')
     print(bacsi.get_chuyen_khoa())
     print(bacsi.get_name_and_id())
