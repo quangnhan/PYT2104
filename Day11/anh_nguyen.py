@@ -18,7 +18,7 @@ class CsvFile():
         for i in reader:
             print(i)
 if __name__ == "__main__":
-    path = f"{os.getcwd()}/data/data.txt"
-    path1 = f"{os.getcwd()}/data/data.csv"
+    path = f"{os.getcwd()}/Day11/data/data.txt"
+    path1 = f"{os.getcwd()}/Day11/data/data.csv"
     a = JsonFile(path).show()
     b = CsvFile(path1).show()
