@@ -1,9 +1,9 @@
 import os
 
-class Server:
+class Server():
     def __get_all_customers(self):
         path = f"{os.getcwd()}/Day10/customers.txt"
-        f = open(path, 'r')
+        f = open(path,'r')
         customers = []
 
         for line in f:
@@ -13,7 +13,7 @@ class Server:
                 "password": password, 
                 "account_balance": int(account_balance), 
             })
-
+            print(line)
         return customers
 
     def login(self, username, password):
@@ -32,9 +32,12 @@ class Server:
             "account_balance" : account_balance,
         }
 
+
+
+# server = Server()
+# server.__get_all_customers()
 if __name__ == "__main__":
     username = "quangnhan"
     password = "123"
     server = Server()
     resposne = server.login(username, password)
-    print(resposne)
