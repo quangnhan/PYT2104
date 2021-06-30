@@ -1,4 +1,4 @@
-from Day11.nhom3.kieunu import KieuNu
+from kieunu import KieuNu
 class NguoiMau(KieuNu):
     def __init__(self, name, height, weight, age):
         super().__init__(name, height, weight)
@@ -8,4 +8,5 @@ class NguoiMau(KieuNu):
         return super().say_hi()
     
     def tinh_lai_kep(self, money, years, interest):
-        pass
+        lai_kep = money*(1 + interest)**years
+        return lai_kep

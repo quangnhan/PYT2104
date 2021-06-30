@@ -1,4 +1,4 @@
-from Day11.nhom3.kieunu import KieuNu
+from kieunu import KieuNu
 class CaSi(KieuNu):
     def __init__(self, name, height, weight, nguoi_yeu):
         super().__init__(name, height, weight)
@@ -8,4 +8,7 @@ class CaSi(KieuNu):
         return super().say_hi()
     
     def tha_thinh(self):
-        pass
+        if self.__nguoi_yeu == False:
+            print('I Love U')
+        else:
+            print('I Hate U')
