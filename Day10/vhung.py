@@ -67,5 +67,3 @@ if __name__ == '__main__':
     bs = BacSi(name, id, 'Thu y')
     print(bs.get_chuyen_khoa())
     print(bs.get_name_and_id())
-    
-    
