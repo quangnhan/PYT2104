@@ -33,10 +33,25 @@ class XlsxFile:
     def show(self, path):
         pandas_reader = pd.read_excel(path, engine = "openpyxl")
         print(pandas_reader['Name'][0])
+        
+class File:
+    def __init__(self, path):
+        file_type = path.split('.')[1]
+        self.path = path
+        print(file_type)
+        if file_type == 'txt':
+            self.file = JsonFile()   
+        elif file_type == 'csv':
+            self.file = CSVFile()
+        elif file_type == 'xlsx':
+            self.file = XlsxFile()
+        
+    def show(self):
+        self.file.show(self.path)
     
 if __name__ == '__main__':
     txt_path = f'{os.getcwd()}/Day11/data/data.txt'
     csv_path = f'{os.getcwd()}/Day11/data/data.csv'
     xlsx_path = f'{os.getcwd()}/Day11/data/data.xlsx'
-    json = XlsxFile()
-    json.show(xlsx_path)
+    file = File(xlsx_path)
+    file.show()
