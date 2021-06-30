@@ -1,13 +1,21 @@
-from Day11.nhom3.kieunu import KieuNu
+from kieunu import KieuNu
+
 class HoaHau(KieuNu):
 
-    def __init__(self, name, sex):
-        self.name = name
-        self.sex = sex
+    # def __init__(self, name, sex):
+    #     self.name = name
+    #     self.sex = sex
 
     def say_hi(self):
-        print(f" Hello world, I'm {self.name}")
+        return self.say_hi
 
-    def check_snt(self,n):
-        pass
+    def check_snt(n):
+        count = 0
+        for i in range(1,n+1):
+            if n % i == 0:
+                count += 1
+            if count == 2:
+                return True
+            return False
+
 
