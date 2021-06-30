@@ -10,6 +10,6 @@ class JsonFile:
             print(line)
 
 if __name__ == '__main__':
-    path = f'{os.getcwd()}/data/data.txt'
+    path = f'{os.getcwd()}/Day11/data/data.txt'
     json = JsonFile(path)
     json.show()
