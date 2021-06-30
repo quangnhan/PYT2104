@@ -1,3 +1,5 @@
+import os
+
 class JsonFile:
     def __init__(self, path):
         self.path = path
@@ -8,6 +10,6 @@ class JsonFile:
             print(line)
 
 if __name__ == '__main__':
-    path = './data/data.txt'
+    path = f'{os.getcwd()}/data/data.txt'
     json = JsonFile(path)
     json.show()
