@@ -2,9 +2,8 @@ from kieunu import KieuNu
 
 class HoaHau(KieuNu):
 
-    # def __init__(self, name, sex):
-    #     self.name = name
-    #     self.sex = sex
+    def __init__(self, name):
+        super().__init__(name)
 
     def say_hi(self):
         return self.say_hi
