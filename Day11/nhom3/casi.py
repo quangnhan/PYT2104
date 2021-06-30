@@ -9,4 +9,3 @@ class CaSi(KieuNu):
     
     def tha_thinh(self):
         pass
-    
