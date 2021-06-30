@@ -1,16 +1,22 @@
-import os
+# import os
 
-class JsonFile:
+# class JsonFile:
 
-    def __init__(self,path):
-        self.path = path
+#     def __init__(self):
+#         pass
 
-    def show(self):
-        f = open(self.path, 'r')
-        for line in f:
-            print(line)
+#     def show(self,path):
+#         f = open(path, 'r')
+#         for line in f:
+#             print(line)
 
-if __name__ == '__main__':
-    path = f'{os.getcwd()}/data/data.txt'
-    json = JsonFile(path)
-    json.show()
+# if __name__ == '__main__':
+#     path = f'{os.getcwd()}/Day11/data/data.txt'
+#     json = JsonFile()
+#     json.show(path)
+
+import csv
+with open('./Day11/data/data.csv','rt')as f:
+  data = csv.reader(f)
+  for row in data:
+        print(row)

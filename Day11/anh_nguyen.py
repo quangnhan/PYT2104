@@ -1,4 +1,6 @@
 import os
+import csv
+
 class JsonFile():
     def __init__(self, path):
         self.path = path
@@ -7,8 +9,16 @@ class JsonFile():
         f = open(self.path,'r')
         for i in f:
             print(i)
+class CsvFile():
+    def __init__(self, path1):
+        self.path1 = path1
 
+    def show(self):
+        reader = csv.DictReader(open(self.path1))
+        for i in reader:
+            print(i)
 if __name__ == "__main__":
     path = f"{os.getcwd()}/data/data.txt"
-    a = JsonFile(path)
-    a.show()
+    path1 = f"{os.getcwd()}/data/data.csv"
+    a = JsonFile(path).show()
+    b = CsvFile(path1).show()
