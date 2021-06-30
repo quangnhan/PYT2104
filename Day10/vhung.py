@@ -61,6 +61,14 @@ class KhachHangMoMo:
 #             'id' : self.get_id()
 #         }
         
+<<<<<<< HEAD
+if __name__ == '__main__':
+    name = 'htv'
+    id = '123456'
+    bs = BacSi(name, id, 'Thu y')
+    print(bs.get_chuyen_khoa())
+    print(bs.get_name_and_id())
+=======
 # if __name__ == '__main__':
 #     name = 'htv'
 #     id = '123456'
@@ -69,3 +77,4 @@ class KhachHangMoMo:
 #     print(bs.get_name_and_id())
     
     
+>>>>>>> 9d5028f6856f04d878dcc4562bac02ceb5f3789f
