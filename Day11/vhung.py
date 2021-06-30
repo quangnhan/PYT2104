@@ -22,7 +22,7 @@ class CSVFile:
         #     for row in data:
         #         print(row)
         
-        csv_reader = csv.DictReader(open(path), delimiter=',')
+        csv_reader = csv.DictReader(open(path), delimiter = ',')
         for i in csv_reader:
             print(i)
             
@@ -31,8 +31,8 @@ class XlsxFile:
         pass
     
     def show(self, path):
-        pandas_reader = pd.read_excel(path, engine="openpyxl")
-        print(pandas_reader)
+        pandas_reader = pd.read_excel(path, engine = "openpyxl")
+        print(pandas_reader['Name'][0])
     
 if __name__ == '__main__':
     txt_path = f'{os.getcwd()}/Day11/data/data.txt'
