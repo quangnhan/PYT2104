@@ -1,10 +1,9 @@
-class HoaHau :
-
-    def __init__(self, name, sex):
-        self.name=name
+class HoaHau:
+    def __init__(self, name, height, weight):
+        super().__init__(name, height, weight)
 
     def say_hi(self):
-        print(f"Hello {self.name}")
-        
-    def check_snt(self,n):
+        return self.say_hi()
+    
+    def check_snt(self):
         pass
