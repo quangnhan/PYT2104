@@ -1,7 +1,7 @@
 import requests
 from pprint import pprint
 
-url = "https://600e98dd3bb1d100179df9c4.mockapi.io/candidate"
+url = "https://60e1a9c05a5596001730f19e.mockapi.io/human"
 
 response = requests.get(url)
 data = response.json()
