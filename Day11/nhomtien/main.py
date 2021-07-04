@@ -1,11 +1,12 @@
 from kieunu import KieuNu
 from nguoimau import NguoiMau
+from casi import CaSi
 
 
 
 if __name__ == "__main__":
-    kn = KieuNu("Hao","160","55")
-    print(kn.say_hi())
+    kn = KieuNu("Hoo","160","55")
+    kn.say_hi()
 
     age = "20"
     money = 7000
@@ -13,6 +14,10 @@ if __name__ == "__main__":
     interest = 10
 
     tuoinguoi = NguoiMau(age,money,year,interest)
-    print(tuoinguoi.say_hi())
+    tuoinguoi.say_hi()
     tuoinguoi.tinh_lai_kep()
 
+
+    ny = "Hao Hao"
+    theanh = CaSi(ny)
+    theanh.say_hi()
