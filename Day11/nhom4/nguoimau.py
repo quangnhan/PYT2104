@@ -12,4 +12,5 @@ class NguoiMau(KieuNu):
         print(f"Tuoi la {self.__age}")
 
     def tinh_lai_kep(self, money, years, interest):
-        pass
+        money_out = money*((interest/100 + 1)**years)
+        print(f"voi so von {money} va lai suat {interest}, sau {years} ban co {money_out}")
