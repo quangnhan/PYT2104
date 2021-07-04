@@ -1,0 +1,14 @@
+1) Bài tập về request
+- Viết class Server
+- __url = https://www.mockapi.io/
+- Viết 4 hàm để thực hiện 4 lệnh get, post, put, delete
+- Viết hàm log để lưu log vào file log.txt, Ví dụ:
+    get - 10:20:23 4/7/2021
+    post - 10:20:28 4/7/2021
+    put - 10:20:28 4/7/2021
+    delete - 10:20:50 4/7/2021
+
+2) Bài tập về viết email
+- Viết class Gmail
+- Viết hàm congratulation(name, email) để tự động gửi email đến những ứng viên trúng tuyển,
+trong đó danh sách ứng viên lấy từ API (Dùng class Server đã viết ở trên để lấy dữ liệu)
