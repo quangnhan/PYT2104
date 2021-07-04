@@ -4,7 +4,7 @@ from pprint import pprint
 
 url = "https://60e1aa205a5596001730f1ac.mockapi.io/human"
 new_data = {
-    "name": "Thao",
+    "name": "Thao666",
     "age": 25,
 }
 
