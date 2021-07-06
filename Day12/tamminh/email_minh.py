@@ -4,7 +4,7 @@ port = 465  # For SSL
 smtp_server = "smtp.gmail.com"
 sender_email = "tatamminh151196@gmail.com"  # Enter your address
 receiver_email = "nhan.vo@menlosecurity.com"  # Enter receiver address
-password = "123123"
+password = "jsbtgbbjeypgudys"
 message = """\
 Subject: Hi there
 
