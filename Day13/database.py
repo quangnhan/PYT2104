@@ -26,7 +26,7 @@ LIST_MOCKAPI = [
     {"name" : "Tien", "url" : "https://60e1a9d05a5596001730f1aa.mockapi.io/humann"},
     {"name" : "Thao", "url" : ""},
     {"name" : "Duc", "url" : ""},
-    {"name" : "Hung", "url" : ""},
+    {"name" : "Hung", "url" : "https://60e1a9ca5a5596001730f1a6.mockapi.io/human"},
     {"name" : "Nguyen Anh", "url" : "https://60e1a9545a5596001730f19b.mockapi.io/human"},
     {"name" : "The Anh", "url" : ""},
     {"name" : "Son", "url" : ""},
