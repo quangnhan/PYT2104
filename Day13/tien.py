@@ -30,4 +30,4 @@ for api in list_mockapi:
 for  t in threads:
     t.join()
 
-ptinr(f'count: {count}')
+print(f'count: {count}')
