@@ -2,6 +2,7 @@ import requests
 import threading
 from datetime import datetime
 from database import Database
+from concurrent.futures import ProcessPoolExecutor
 
 #Database
 db = Database()
@@ -14,24 +15,29 @@ count = 0
 def post_data(human):
     global count 
     
-    print("Start", human["id"])
+    print("Start", human["id"], count)
     response = requests.post(url, data=human)
 
     if response.status_code == 201:
         count += 1
 
-    print("End", human["id"], response)
+    print("End", human["id"], response, count)
 
-start = datetime.now()
-threads = []
+if __name__ == "__main__":
+    start = datetime.now()
+    threads = []
+    
+    executor = ProcessPoolExecutor(max_workers=3)
 
-for human in humans:
-    t = threading.Thread(target=post_data, args=(human,))
-    t.start()
-    threads.append(t)
-    # post_data(human)
+    for human in humans:
+        executor.submit(post_data, (human))
+        # t = threading.Thread(target=post_data, args=(human,))
+        # t.start() # worker
+        # threads.append(t)
 
-for t in threads:
-    t.join()
+    # for t in threads:
+    #     t.join()
 
-print(f"Count : {count} Done : {datetime.now() - start}")
+    executor.shutdown()
+
+    print(f"Count : {count} Done : {datetime.now() - start}")
