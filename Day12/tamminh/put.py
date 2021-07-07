@@ -9,7 +9,7 @@ new_data = {
     "human": "Minh",
 }
 
-response = requests.put(f"{url}/{id}", json = new_data)
+response = requests.put(f"{url}/{id}", data=new_data)
 data = response.json()
 
 pprint(data)
