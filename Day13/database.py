@@ -31,6 +31,8 @@ LIST_MOCKAPI = [
     {"name" : "Son", "url" : "https://60e1a9c45a5596001730f1a0.mockapi.io/human"},
     {"name" : "Minh", "url" : "https://60e1aaa95a5596001730f1c1.mockapi.io/human"},
     {"name" : "Thanh", "url" : "https://60e484a35bcbca001749ea92.mockapi.io/human"},
+     {"name" : "The anh", "url" : "https://60e1a9cc5a5596001730f1a8.mockapi.io/human"},
+
 ]
 
 class Database:
