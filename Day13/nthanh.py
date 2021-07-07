@@ -6,10 +6,9 @@ from database import Database
 #Database
 db = Database()
 human = db.get(1)
-
 list_mockapi = db.get_mockapis()
-
-#Post data
+start = datetime.now()
+threads = []
 count = 0
 
 def post_data(url, name, human):
@@ -22,18 +21,12 @@ def post_data(url, name, human):
         count += 1
         print(name, "ok!")
     
-
-start = datetime.now()
-threads = []
-
 for api in list_mockapi:
     t = threading.Thread(target=post_data, args=(api["url"],api["name"], human))
     t.start()
     threads.append(t)
-    # post_data(human)
 
 for t in threads:
     t.join()
     
-
 print(f"Count : {count} Done : {datetime.now() - start}")
