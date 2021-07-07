@@ -1,4 +1,4 @@
-LIST_HUMAN = [  
+LIST_HUMAN = [
                 {'age': 48, 'id': '1', 'name': 'name 1'},
                 {'age': 94, 'id': '2', 'name': 'name 2'},
                 {'age': 49, 'id': '3', 'name': 'name 3'},
@@ -22,16 +22,17 @@ LIST_HUMAN = [
             ]
 
 LIST_MOCKAPI = [
+
     {"name" : "Nhan", "url" : "https://60e1a9c05a5596001730f19e.mockapi.io/human"},
     {"name" : "Tien", "url" : "https://60e1a9d05a5596001730f1aa.mockapi.io/humann"},
     {"name" : "Thao", "url" : "https://60e59c605bcbca001749edaf.mockapi.io/human"},
-    {"name" : "Duc", "url" : ""},
+    {"name" : "Duc", "url" : ""https://60e59c985bcbca001749edb3.mockapi.io/human"},
     {"name" : "Hung", "url" : "https://60e1a9ca5a5596001730f1a6.mockapi.io/human"},
     {"name" : "Nguyen Anh", "url" : "https://60e1a9545a5596001730f19b.mockapi.io/human"},
     {"name" : "The Anh", "url" : ""},
     {"name" : "Son", "url" : "https://60e1a9c45a5596001730f1a0.mockapi.io/human"},
     {"name" : "Minh", "url" : "https://60e1aaa95a5596001730f1c1.mockapi.io/human"},
-    {"name" : "Thanh", "url" : ""},
+    {"name" : "Thanh", "url" : "https://60e484a35bcbca001749ea92.mockapi.io/human"},
     {"name" : "Quang", "url" : ""},
 ]
 
