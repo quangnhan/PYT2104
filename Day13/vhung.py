@@ -1,12 +1,12 @@
 import threading
 import requests
 from database import Database
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 
 db = Database()
 list_human = db.get()
 list_mockapi = db.get_mockapis()
-count = 0
-threads = []
+
 
 # def post_data(human, api):
 #     global count
@@ -34,12 +34,25 @@ def post_data(human):
         print(f'{name} ok!')
         count += 1
 
-for human in list_human:
-    t = threading.Thread(target=post_data, args=(human,))
-    t.start()
-    threads.append(t)
+if __name__ == "__main__":
+    threads = []
+    count = 0 
+    
+    # ProcessPoolExecutor runs each of your workers in its own separate child process.
+    # ThreadPoolExecutor runs each of your workers in separate threads within the main process.
+    
+    # executor = ProcessPoolExecutor(max_workers = 3)
+    executor = ThreadPoolExecutor(max_workers = 3) 
+    for human in list_human:
+        executor.submit(post_data, (human))
+    executor.shutdown()
+    
+    # for human in list_human:    
+    #     t = threading.Thread(target=post_data, args=(human,))
+    #     t.start()
+    #     threads.append(t)
 
-for t in threads:
-    t.join()
+    # for t in threads:
+    #     t.join()
 
-print(f'Count: {count}')
+    print(f'Count: {count}')
