@@ -9,17 +9,30 @@ LIST_HUMAN = [
                 {'age': 43, 'id': '8', 'name': 'name 8'},
                 {'age': 57, 'id': '9', 'name': 'name 9'},
                 {'age': 97, 'id': '10', 'name': 'name 10'},
-                {'age': 35, 'id': '11', 'name': 'name 11'},
-                {'age': 64, 'id': '12', 'name': 'name 12'},
-                {'age': 14, 'id': '13', 'name': 'name 13'},
-                {'age': 61, 'id': '14', 'name': 'name 14'},
-                {'age': 93, 'id': '15', 'name': 'name 15'},
-                {'age': 30, 'id': '16', 'name': 'name 16'},
-                {'age': 84, 'id': '17', 'name': 'name 17'},
-                {'age': 39, 'id': '18', 'name': 'name 18'},
-                {'age': 44, 'id': '19', 'name': 'name 19'},
-                {'age': 77, 'id': '20', 'name': 'name 20'}
+                # {'age': 35, 'id': '11', 'name': 'name 11'},
+                # {'age': 64, 'id': '12', 'name': 'name 12'},
+                # {'age': 14, 'id': '13', 'name': 'name 13'},
+                # {'age': 61, 'id': '14', 'name': 'name 14'},
+                # {'age': 93, 'id': '15', 'name': 'name 15'},
+                # {'age': 30, 'id': '16', 'name': 'name 16'},
+                # {'age': 84, 'id': '17', 'name': 'name 17'},
+                # {'age': 39, 'id': '18', 'name': 'name 18'},
+                # {'age': 44, 'id': '19', 'name': 'name 19'},
+                # {'age': 77, 'id': '20', 'name': 'name 20'}
             ]
+
+LIST_MOCKAPI = [
+    {"name" : "Tien", "url" : ""},
+    {"name" : "Thao", "url" : ""},
+    {"name" : "Duc", "url" : ""},
+    {"name" : "Hung", "url" : ""},
+    {"name" : "Nguyen Anh", "url" : ""},
+    {"name" : "The Anh", "url" : ""},
+    {"name" : "Son", "url" : ""},
+    {"name" : "Minh", "url" : ""},
+    {"name" : "Thanh", "url" : ""},
+    {"name" : "Quang", "url" : ""},
+]
 
 class Database:
     def get(self, id=None):
@@ -29,3 +42,6 @@ class Database:
                     return human
 
         return LIST_HUMAN
+
+    def get_mockapis(self):
+        return LIST_MOCKAPI
