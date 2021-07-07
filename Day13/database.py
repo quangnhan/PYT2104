@@ -31,7 +31,7 @@ LIST_MOCKAPI = [
     {"name" : "The Anh", "url" : ""},
     {"name" : "Son", "url" : ""},
     {"name" : "Minh", "url" : ""},
-    {"name" : "Thanh", "url" : ""},
+    {"name" : "Thanh", "url" : "https://60e484a35bcbca001749ea92.mockapi.io/human"},
     {"name" : "Quang", "url" : ""},
 ]
 
