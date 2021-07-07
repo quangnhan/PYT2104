@@ -23,7 +23,7 @@ LIST_HUMAN = [
 
 LIST_MOCKAPI = [
     {"name" : "Nhan", "url" : "https://60e1a9c05a5596001730f19e.mockapi.io/human"},
-    {"name" : "Tien", "url" : ""},
+    {"name" : "Tien", "url" : "https://60e1a9d05a5596001730f1aa.mockapi.io/humann"},
     {"name" : "Thao", "url" : ""},
     {"name" : "Duc", "url" : ""},
     {"name" : "Hung", "url" : ""},
