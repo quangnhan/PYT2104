@@ -10,11 +10,11 @@ threads = []
 
 def post_data(human, api):
     global count
-    print("Start", api["name"])
+    name = api['name']
+    print("Start", name)
     response = requests.post(api['url'], data=human)
     print("End", api["name"], response)
     if response.status_code == 201:
-        name = api['name']
         print(f'{name} ok!')
         count += 1
 
@@ -26,4 +26,4 @@ for api in list_mockapi:
 for t in threads:
     t.join()
 
-print(f'count {count}')
+print(f'Count: {count}')
