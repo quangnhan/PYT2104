@@ -4,33 +4,54 @@ from datetime import datetime
 from database import Database
 
 #Database
-db = Database()
-human = db.get(1)
+# db = Database()
+# human = db.get(1)
+# list_mockapi = db.get_mockapis()
+# start = datetime.now()
+# threads = []
+# count = 0
 
-list_mockapi = db.get_mockapis()
-
-#Post data
-count = 0
-
-def post_data(api, human):
-    global count 
+# def post_data(url, name, human):
+#     global count 
+#     name = api["name"]
+#     print("Start", name)
+#     response = requests.post(url, data=human)
+#     print("End", name, response)
+#     if response.status_code == 201:
+#         count += 1
+#         print(name, "ok!")
     
-    print("Start", human["id"])
-    response = requests.post(api, data=human)
+# for api in list_mockapi:
+#     t = threading.Thread(target=post_data, args=(api["url"],api["name"], human))
+#     t.start()
+#     threads.append(t)
 
-    if response.status_code == 201:
-        count += 1
+# for t in threads:
+#     t.join()
+    
+# print(f"Count : {count} Done : {datetime.now() - start}")
 
-    print("End", human["id"], response)
-
+Database
+db = Database()
+humans = db.get()
+list_mockapi = db.get_mockapis()
+url = list_mockapi[8]["url"]
 start = datetime.now()
 threads = []
+count = 0
 
-for api in list_mockapi:
-    t = threading.Thread(target=post_data, args=(api["url"], human))
+def post_data(url, human):
+    global count 
+    print("Start", human["id"])
+    response = requests.post(url, data=human)
+    print("End", human["id"], response)
+    if response.status_code == 201:
+        count += 1
+    
+for human in humans:
+    t = threading.Thread(target=post_data, args=(url, human))
     t.start()
     threads.append(t)
-    # post_data(human)
 
 for t in threads:
     t.join()

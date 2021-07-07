@@ -12,4 +12,3 @@ def post_data(api, human):
 
 for api in list_mockapi:
     t = threading.Thread(target=post_data, args=(human,))
-    t.start()
