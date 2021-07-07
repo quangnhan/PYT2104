@@ -3,7 +3,8 @@ import threading
 import requests
 
 db = Database()
-human = db.get(1)
+human = db.get()
+url = "https://60e1a9c45a5596001730f1a0.mockapi.io/human"
 
 list_mockapi = db.get_mockapis()
 count = 0
@@ -17,10 +18,14 @@ def post_data(api, human):
         count += 1
     print("End", human["id"], response)
 threads = []
-for api in list_mockapi:
-    t = threading.Thread(target=post_data, args=(api["url"],human))
+for i in human:
+    t = threading.Thread(target=post_data, args=(url, i))
     t.start()
     threads.append(t)
+#for api in list_mockapi:
+#    t = threading.Thread(target=post_data, args=(api["url"],human))
+#    t.start()
+#    threads.append(t)
 for t in threads:
     t.join()
 
