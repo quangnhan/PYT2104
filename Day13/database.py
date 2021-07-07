@@ -1,4 +1,4 @@
-LIST_HUMAN = [  
+LIST_HUMAN = [
                 {'age': 48, 'id': '1', 'name': 'name 1'},
                 {'age': 94, 'id': '2', 'name': 'name 2'},
                 {'age': 49, 'id': '3', 'name': 'name 3'},
@@ -24,7 +24,7 @@ LIST_HUMAN = [
 LIST_MOCKAPI = [
     {"name" : "Tien", "url" : ""},
     {"name" : "Thao", "url" : ""},
-    {"name" : "Duc", "url" : ""},
+    {"name" : "Duc", "url" : "https://60e59c985bcbca001749edb3.mockapi.io/human/"},
     {"name" : "Hung", "url" : ""},
     {"name" : "Nguyen Anh", "url" : ""},
     {"name" : "The Anh", "url" : ""},
