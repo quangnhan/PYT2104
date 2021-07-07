@@ -51,7 +51,7 @@ def post(url, name, data):
         count += 1
         print(f"End post into {name} mockapi", data["id"], response)
     else:
-        print("Khong thanh cong")
+        print(f"Khong thanh cong {response.status_code}")
 
 start = datetime.now()
 threads = []
