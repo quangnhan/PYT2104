@@ -38,6 +38,7 @@ if __name__ == "__main__":
     threads = []
     count = 0 
     
+    ### Different ProcessPoolExecutor & ThreadPoolExecutor 
     # ProcessPoolExecutor runs each of your workers in its own separate child process.
     # ThreadPoolExecutor runs each of your workers in separate threads within the main process.
     
