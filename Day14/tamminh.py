@@ -12,13 +12,18 @@ class Server:
         response = {}
 
         try:
-            response = requests.get(f"{self.__url}/{int(id)}").json()
+            if not isinstance(id, int):
+                raise TypeError
 
-            if response.size() == 0:
+            response = requests.get(f"{self.__url}/{id}")
+
+            if response:
                 raise Exception
+            
+            response = response.json()
 
             self.__log.log("INFO", "get thanh cong")
-        except ValueError:
+        except TypeError:
             self.__log.log("ERROR", f"id {id} khong phai so")
         except:
             self.__log.log("ERROR", "server khong tra ve du lieu")
@@ -27,12 +32,17 @@ class Server:
 
     def post(self, data):
         try:
-            print(data["age"], data["name"])
-            if not data["age"] or not data["name"]:
+            if not data.get("age") or not data.get("name"):
                 raise Exception
 
-            requests.post(self.__url, data=data)
+            response = requests.post(self.__url, data=data)
+
+            if response.status_code != 201:
+                raise ValueError
+
             self.__log.log("INFO", "post data thanh cong")
+        except ValueError:
+            self.__log.log("ERROR", "loi server")
         except:
             self.__log.log("ERROR", "data khong hop le")
 
@@ -42,5 +52,5 @@ if __name__ == "__main__":
         "name" : "Minh"
     }
     sv = Server()
-    sv.get_by_id("1a")
-    sv.post(data)
+    sv.get_by_id(1)
+    # sv.post(data)
