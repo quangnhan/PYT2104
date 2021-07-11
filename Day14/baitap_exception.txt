@@ -1,0 +1,11 @@
+1) Update function get 
+- Dùng try except để kiểm tra id:
+    + Id có phải là int 
+    + Server có trả về dữ liệu không
+- Nếu không hợp lệ thì trả về dictionary rỗng
+- Gửi log lên server, nếu thành công thì gửi log INFO, nếu thất bại thì gửi log ERROR
+
+2) Update function post
+- Kiểm tra xem dữ liệu đầu vào có đủ 2 trường "age" và "name" hay không
+- Gửi log lên server, nếu thành công thì gửi log INFO, nếu thất bại thì gửi log ERROR
+
