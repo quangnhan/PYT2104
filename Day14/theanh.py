@@ -61,4 +61,4 @@ if __name__ == "__main__":
     }
     theanh = Server()
     theanh.get_by_id("1a")
-    theanh.post(data )
+    theanh.post(data)
