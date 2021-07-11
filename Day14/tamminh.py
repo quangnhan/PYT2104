@@ -4,10 +4,8 @@ import unittest
 
 
 # class Server:
-
-#     def __init__(self):
-#         self.__url = "https://60e1aaa95a5596001730f1c1.mockapi.io/human"
-#         self.__log = Log("Minh")
+#     __url = "https://60e1aaa95a5596001730f1c1.mockapi.io/human"
+#     __log = Log("Minh")
 
 #     def get_by_id(self, id):
 #         response = {}
