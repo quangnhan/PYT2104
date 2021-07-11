@@ -24,11 +24,27 @@ class Server:
         except:
             self.__log.log("ERROR", "server khong tra ve du lieu")
         return response
+    
+    def post(self, post_data):
+        try:
+            name = post_data['name']
+            age = post_data['age']
+            response = requests.post(self.__url, data = post_data)
+            if response.status_code != 201:
+                raise ValueError
+            self.__log.log('Info','Send thanh cong')
+        except ValueError:
+            self.__log.log('Error','Loi gui du lieu')
+        except:
+            self.__log.log('Error','Khong du truong')
         
 
 if __name__ == "__main__":
-    id = "2"
     server = Server()
-    print(server.get_by_id(id))
-    
+    post_data = {
+        "name1": "thanh",
+        "age": 99,
+    }
 
+    # print(server.get_by_id(2))
+    server.post(post_data)
