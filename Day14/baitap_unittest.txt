@@ -1,0 +1,12 @@
+Sử dụng các function sau để tạo unnitest:
++ assertRaises
++ assertTrue
++ assertFalse
++ assertEqual
++ assertNotEqual
+
+(Có thể dùng thêm các function khác)
+Tạo ít nhất 10 unittest
+
+$ cd Day14
+$ python -m unittest nhan
