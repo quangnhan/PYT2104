@@ -2,6 +2,7 @@ import requests
 import threading
 from datetime import datetime
 from database import Database
+from concurrent.futures import ProcessPoolExecutor
 
 #Database
 # db = Database()
@@ -31,29 +32,36 @@ from database import Database
     
 # print(f"Count : {count} Done : {datetime.now() - start}")
 
-Database
 db = Database()
 humans = db.get()
 list_mockapi = db.get_mockapis()
-url = list_mockapi[8]["url"]
-start = datetime.now()
-threads = []
+url = "https://60e1a9c05a5596001730f19e.mockapi.io/human"
 count = 0
 
-def post_data(url, human):
+def post_data(human):
     global count 
     print("Start", human["id"])
     response = requests.post(url, data=human)
+    print(count)
     print("End", human["id"], response)
+
     if response.status_code == 201:
         count += 1
     
-for human in humans:
-    t = threading.Thread(target=post_data, args=(url, human))
-    t.start()
-    threads.append(t)
+if __name__=="__main__":    
+    start = datetime.now()
+    threads = []
+    
+    executor = ProcessPoolExecutor(max_workers=3)
 
-for t in threads:
-    t.join()
+    for human in humans:
+        executor.submit(post_data, (human))
+        
+    #     t = threading.Thread(target=post_data, args=(url, human))
+    #     t.start()
+    #     threads.append(t)
 
-print(f"Count : {count} Done : {datetime.now() - start}")
+    # for t in threads:
+    #     t.join()
+    executor.shutdown()
+    print(f"Count : {count} Done : {datetime.now() - start}")
