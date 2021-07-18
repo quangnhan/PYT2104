@@ -12,6 +12,7 @@ class Database:
         self.cur = self.myconn.cursor()
 
         #tao bảng
+        self.__create_table_users()
         self.__create_table_customer()
         self.__create_table_company_info()
         self.__create_table_websites()
@@ -25,8 +26,25 @@ class Database:
                 
             # tìm nạp các hàng từ đối tượng con trỏ  
             result = self.cur.fetchall()
-        
         return result
+
+    def get_user(self, username, password):
+        # select dữ liệu từ database
+        self.cur.execute(f"SELECT * FROM users WHERE username='{username}' and password='{password}'")
+            
+        # tìm nạp các hàng từ đối tượng con trỏ  
+        result = self.cur.fetchall()
+        return result
+
+    def __create_table_users(self):
+        self.cur.execute("""
+            CREATE TABLE IF NOT EXISTS `users` (
+            `id` INT NOT NULL AUTO_INCREMENT,
+            `username` VARCHAR(45) NULL,
+            `password` VARCHAR(45) NULL,
+            PRIMARY KEY (`id`))
+            ENGINE = InnoDB
+        """)
 
     def __create_table_customer(self):
         self.cur.execute("""
