@@ -23,6 +23,15 @@ class Database:
         
         return result
 
+    def get_user(self, username, password):
+        sql = f"SELECT * FROM users \
+            WHERE `username`='{username}' \
+                AND `password`='{password}'"
+        # print(sql)
+        self.cur.execute(sql)
+        result = self.cur.fetchall()
+        return result
+
     # ### Test create table
     # def create_table_test(self):
     #     sql = "CREATE TABLE `test` ( \
@@ -33,10 +42,10 @@ class Database:
         
     #     self.cur.execute(sql)
 
-if __name__ == "__main__":
-    db = Database()
-    customers = db.get_customer()
-    # create = db.create_table_test()
+# if __name__ == "__main__":
+#     db = Database()
+#     customers = db.get_customer()
+#     # create = db.create_table_test()
 
-    for customer in customers:
-        print(customer) 
+#     for customer in customers:
+#         print(customer) 
