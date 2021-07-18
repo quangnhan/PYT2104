@@ -6,8 +6,8 @@ class Database:
         # database la schema
         self.myconn = mysql.connector.connect(host = "127.0.0.1", 
                                             user = "root", 
-                                            passwd = "phuonganh1639@", 
-                                            database = "leadplus")
+                                            passwd = "manhtien123", 
+                                            database = "fabbi")
     
    
         #tạo đối tượng cursor
