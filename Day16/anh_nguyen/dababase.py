@@ -6,8 +6,8 @@ class Database:
         # database la schema
         self.myconn = mysql.connector.connect(host = "127.0.0.1", 
                                             user = "root", 
-                                            passwd = "phuonganh1639@", 
-                                            database = "leadplus")
+                                            passwd = "Viettel#2021", 
+                                            database = "anh_nguyen")
     
    
         #tạo đối tượng cursor
@@ -16,7 +16,7 @@ class Database:
     def get_customer(self, id=None):
         if id == None:
             # select dữ liệu từ database
-            self.cur.execute("SELECT * FROM customers")
+            self.cur.execute("SELECT * FROM customer")
                 
             # tìm nạp các hàng từ đối tượng con trỏ  
             result = self.cur.fetchall()

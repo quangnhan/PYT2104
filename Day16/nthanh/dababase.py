@@ -16,7 +16,7 @@ class Database:
     def get_customer(self, id=None):
         if id == None:
             # select dữ liệu từ database
-            self.cur.execute("SELECT * FROM customers")
+            self.cur.execute("SELECT * FROM customer")
                 
             # tìm nạp các hàng từ đối tượng con trỏ  
             result = self.cur.fetchall()

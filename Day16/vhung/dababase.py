@@ -5,8 +5,8 @@ class Database:
     def __init__(self):
         # database la schema
         self.myconn = mysql.connector.connect(host = "127.0.0.1", 
-                                            user = "root", 
-                                            passwd = "phuonganh1639@", 
+                                            user = "unknown", 
+                                            passwd = "model.kn2412", 
                                             database = "leadplus")
     
    
