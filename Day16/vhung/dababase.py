@@ -23,9 +23,20 @@ class Database:
         
         return result
 
+    # ### Test create table
+    # def create_table_test(self):
+    #     sql = "CREATE TABLE `test` ( \
+    #         `id` int NOT NULL AUTO_INCREMENT, \
+    #         `name` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,\
+    #         PRIMARY KEY (`id`) \
+    #         ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;"
+        
+    #     self.cur.execute(sql)
+
 if __name__ == "__main__":
     db = Database()
     customers = db.get_customer()
+    # create = db.create_table_test()
 
     for customer in customers:
         print(customer) 
