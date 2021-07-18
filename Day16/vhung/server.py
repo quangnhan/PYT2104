@@ -7,7 +7,7 @@ class Server:
     def __init__(self, username, password):
         login = self.__db.get_user(username, password)
         if login != []: 
-            print(login)
+            print(f"Logined as '{login[0][1]}'")
             self.__login = True
         else: 
             print("Sai ten dang nhap hoac mat khau!!!")
@@ -15,9 +15,3 @@ class Server:
     def getCustomer(self, id=None):
         customers = self.__db.get_customer()
         return customers  
-
-if __name__ == "__main__":
-    username = "admin"
-    password = "admin1"
-    sv = Server(username, password)
-    print(sv.getCustomer())
