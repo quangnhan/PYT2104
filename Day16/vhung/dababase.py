@@ -10,15 +10,15 @@ class Database:
                                             database = "leadplus")
     
    
-        #tạo đối tượng cursor
+        # tao doi tuong cursor
         self.cur = self.myconn.cursor()
     
     def get_customer(self, id=None):
         if id == None:
-            # select dữ liệu từ database
+            # select du lieu tu database
             self.cur.execute("SELECT * FROM customers")
                 
-            # tìm nạp các hàng từ đối tượng con trỏ  
+            # tim nap cac hang tu doi tuong con tro
             result = self.cur.fetchall()
         
         return result
