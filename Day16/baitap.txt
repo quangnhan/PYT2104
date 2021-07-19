@@ -1,0 +1,10 @@
+User
+username
+password
+
+
+permission
+role (admin, user, customer_edit, customer_view, customer_delete)
+
+group
+name (giám đốc, trưởng phòng, nhân viên)
