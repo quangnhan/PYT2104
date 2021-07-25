@@ -1,0 +1,41 @@
+
+Bảng User
+1.Name
+2.Giới tính
+3.Ngày tháng năm sinh
+4.Nickname
+5.Mô tả chung
+6.Id
+
+Bảng Group:
+1.Admin
+2.Người có tài khoản trên blog (đăng nhập)
+3.Khách (không đăng nhập)
+
+Bảng danh sách permission:
+1.Quyền xem bài viết
+2.Quyền lưu lại bài viết yêu thích
+3.Quyền tạo blog mới
+4.Quyền chỉnh sửa bài
+5.Quyền xóa bài
+6.Cấp quyền
+
+Bảng user has permission:
+1.Xem blog: khách
+2.Xem blog, lưu bài yêu thích: có tài khoản
+3.Xem, lưu bài yêu thích, tạo blog mới: tài khoản được admin cấp quyền
+4.Xem, chỉnh sửa, xóa, cấp quyền: admin
+5.Xem, chỉnh sửa, xóa: người tạo blog
+
+Bảng Blog
+1.Tên Blog
+2.Chủ blog
+3.Bài viết
+
+Group - User: 1:n
+Group - permission: 1:n
+User - User has permission: 1:n
+User - Blog: 1:n
+
+
+
