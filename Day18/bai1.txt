@@ -1,0 +1,6 @@
+Tạo có sở dữ liệu cho trang web cafef.vn với các yêu cầu như sau:
+1) Người dùng không đăng nhập thì có thể xem các blog
+2) Người dùng sau khi đăng nhập có thể lưu lại những bài blog yêu thích
+3) Chỉ có tài khoản được cấp quyền mới có thể tạo blog mới
+4) Chỉ có người viết ra bài blog đó hoặc admin, mới có quyền chỉnh sửa hoặc xóa nó, 
+những người khác chỉ có quyền xem
