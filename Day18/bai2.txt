@@ -1,0 +1,12 @@
+Tạo cơ sở dữ liệu cho trang tiki.vn
+1) Người mua hàng
+1.1) Người dùng PHẢI đăng nhập thì mới có thể mua hàng
+1.2) Người dùng chọn mặt hàng
+1.3) Theo dõi đơn hàng
+1.4*) Quản lý kho bãi
+1.5*) Quản lý tài xế
+
+2)Người bán hàng
+2.1) Người dùng PHẢI đăng nhập thì mới có thể bán hàng
+2.2) Nhập các mặt hàng cần bán
+2.3*) Quản lý hóa đơn
